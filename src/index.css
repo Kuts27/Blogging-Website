@@ -1,13 +1,178 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* text-align: center; */
+  background-color: #c8c9c7;
+  height: 13vh;
+  
+}
+.blog-heading{
+  margin: 4px;
+
+}
+.links{
+  /* text-decoration: none; */
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  font-size: 20px;
+  margin: 4px;
+
+}
+.links a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bloglist{
+  display: flex;
+  flex-direction: column;
+  /* Aligns items vertically */
+  justify-content: center;
+  align-items: center;
+}
+.bloglist h2 {
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+}
+.blog-property{
+  height: 100px;
+}
+.blog-property h3{
+ color: rgb(199, 81, 101);
+}
+.blog-property a{
+  text-decoration: none;
+}
+.blog-property p{
+  color: rgb(114, 114, 167);
+}
+.blog-property h3, p{
+  text-align: left;
+  padding: 8px;
+}
+
+.blog-details h1{
+  font-size: 20px;
+  color: #f1356d;
+  /* margin-bottom: 10px; */
+  padding: 10px 0;
+  margin: 8px;
+}
+.blog-details div{
+  margin: 20px 0;
+}
+.blog-details p{
+  color: rgb(114, 114, 167);
+}
+
+
+
+.create{
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label{
+  text-align: left;
+  display: block;
+}
+.create h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.create input, .create textarea, .create select{
+  width: 350px;
+  padding: 6px, 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: block;
+}
+.create button{
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.blog-details button{
+  background: #f1356d;
+  color: #fff;
+  font-size: medium;
+  border: 0;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.footer{
+  /* margin: 4px; */
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+
+  /* position: fixed;  */
+  /* Position the footer */
+  bottom: 0; /* Stick it to the bottom */
+  width: 100%; /* Occupy full width */
+  /* flex-shrink: 0;  */
+}
+.foot{
+  background-color: #c8c9c7;
+}
+.footer-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  /* Ensure that the container fills the viewport */
+
+}
+.footer h4:nth-child(3) {
+  padding-right: 20px; /* Adjust the padding as needed */
+}
+
+.home{
+  background-color: antiquewhite;
+  
+}
+.component{
+  background-color: antiquewhite;
+  flex-grow: 1; /* Make the component area grow to fill remaining space */
+
+}
+.text{
+  font-size: large;
+  text-align: left;
+  padding: 8px;
+}
+
+.delete-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

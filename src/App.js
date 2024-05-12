@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Nav from './Nav';
+import Home from './Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Create from './Create';
+import BlogDetails from './BlogDetails';
+import NotFound from './NotFound';
+import Footer from './Footer';
+
 
 function App() {
+
+  //const title = "welcome to my blog"
+  //const link = "https://www.google.com"
   return (
+
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Nav />
+        <div className='component'>
+        
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+        
+        {/* <h2>{title}</h2> */}
+        {/* <p><a href={link}>Google</a></p> */}
+    
+        </div>
+      <div className='foot'>
+          <Footer/>
+      </div>
     </div>
+    </Router>
   );
 }
 
